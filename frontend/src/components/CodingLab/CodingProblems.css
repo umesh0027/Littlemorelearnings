@@ -1,0 +1,317 @@
+/* edtech-frontend/src/components/CodingLab/CodingProblems.css */
+.coding-problems-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    color: #1f1f1f;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #333;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.section-subtitle {
+    color: #666;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.filter-section {
+    background-color: #f9f9fc;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.filter-group {
+    margin-bottom: 0;
+}
+
+.filter-group h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.filter-btn {
+    border: 1px solid #e5e7eb;
+    padding: 0.6rem 1.2rem;
+    background-color: #f0f2f5;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #374151;
+    transition: all 0.25s ease;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.filter-btn:hover {
+    background-color: #e0e4eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filter-btn.active {
+    background-color: #6366f1;
+    color: white;
+    border-color: #6366f1;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+.clear-filters {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.clear-btn {
+    background: none;
+    border: 2px solid #ef4444;
+    color: #ef4444;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(239, 68, 68, 0.2);
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.clear-btn:hover {
+    background-color: #ef4444;
+    color: white;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.4);
+    transform: translateY(-1px);
+}
+
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.problem-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f2f5;
+    min-height: 200px;
+    text-decoration: none !important;
+    /* Ensure no underline on the card itself */
+}
+
+.problem-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-tags {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 16px;
+    padding: 0.3rem 0.8rem;
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+/* Topic Tag Colors */
+.topic.arrays {
+    background-color: #6366f1;
+}
+
+.topic.trees {
+    background-color: #10b981;
+}
+
+.topic.graphs {
+    background-color: #3b82f6;
+}
+
+.topic.linked-lists {
+    background-color: #9333ea;
+}
+
+.topic.queues {
+    background-color: #f59e0b;
+}
+
+.topic.stacks {
+    background-color: #3b82f6;
+}
+
+.topic.dynamic-programming {
+    background-color: #ec4899;
+}
+
+/* Level Tag Colors */
+.level.beginner {
+    background-color: #22c55e;
+}
+
+.level.intermediate {
+    background-color: #f59e0b;
+}
+
+.level.advanced {
+    background-color: #ef4444;
+}
+
+.problem-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    color: #222;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.problem-desc {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.view-link {
+    text-decoration: none !important;
+    /* Ensure no underline, even on hover/active */
+    color: #6366f1;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+    margin-top: auto;
+}
+
+.view-link:hover {
+    color: #4f46e5;
+    transform: translateX(3px);
+    text-decoration: none !important;
+    /* Crucial: ensure no underline on hover */
+}
+
+.view-link:visited {
+    color: #6366f1;
+    text-decoration: none !important;
+    /* Crucial: ensure no underline on visited */
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 12px;
+    color: #64748b;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .problems-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .coding-problems-container {
+        padding: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .filter-section {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .clear-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .problems-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .problem-card {
+        padding: 1.2rem;
+    }
+
+    .problem-title {
+        font-size: 1.1rem;
+    }
+
+    .problem-desc {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .coding-problems-container {
+        padding: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}

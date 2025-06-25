@@ -1,0 +1,311 @@
+/* edtech-frontend/src/components/CodingLab/ProblemDetail.css */
+/* Ensure root layout takes full height */
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* App wrapper */
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main content grows to fill space */
+.main-content {
+    flex: 1;
+}
+
+.problem-detail-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #1f1f1f;
+}
+
+.problem-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+}
+
+.problem-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.problem-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.problem-content {
+    line-height: 1.6;
+}
+
+.problem-content h2 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    color: #333;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.problem-content p {
+    margin-bottom: 1rem;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.example {
+    background-color: #f8fafc;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 3px solid #6366f1;
+}
+
+.example h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.solution-section {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.solution-btn {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.solution-btn:hover {
+    background-color: #4f46e5;
+}
+
+/* Reuse your existing tag styles from CodingProblems.css */
+.tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 0.25rem 0.75rem;
+    color: white;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.topic.arrays {
+    background-color: #6366f1;
+}
+
+.topic.trees {
+    background-color: #10b981;
+}
+
+.topic.graphs {
+    background-color: #3b82f6;
+}
+
+.topic.linked-lists {
+    background-color: #9333ea;
+}
+
+.topic.queues {
+    background-color: #f59e0b;
+}
+
+.topic.stacks {
+    background-color: #3b82f6;
+}
+
+.topic.dynamic-programming {
+    background-color: #ec4899;
+}
+
+.level.beginner {
+    background-color: #22c55e;
+}
+
+.level.intermediate {
+    background-color: #f59e0b;
+}
+
+.level.advanced {
+    background-color: #ef4444;
+}
+
+.problem-not-found {
+    text-align: center;
+    padding: 4rem 2rem;
+    font-size: 1.25rem;
+    color: #ef4444;
+    font-weight: 600;
+    background-color: #fef2f2;
+    border: 2px dashed #fecaca;
+    border-radius: 12px;
+    margin-top: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.03);
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.back-link {
+    margin-bottom: 1rem;
+}
+
+.back-to-lab {
+    text-decoration: none !important;
+    /* Ensure no underline, even on hover/active */
+    color: #2563eb;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.back-to-lab:hover {
+    color: #1d4ed8;
+    text-decoration: none !important;
+    /* Crucial: ensure no underline on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .problem-detail-container {
+        padding: 1rem;
+    }
+
+    .problem-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .problem-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .example {
+        font-size: 0.95rem;
+    }
+
+    .solution-btn {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .back-to-lab {
+        font-size: 0.9rem;
+    }
+}
+
+.code-viewer {
+    margin-top: 2rem;
+}
+
+.tab-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tab-btn {
+    background-color: #e2e8f0;
+    color: #1f2937;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.tab-btn:hover {
+    background-color: #cbd5e1;
+}
+
+.tab-btn.active {
+    background-color: #6366f1;
+    color: white;
+}
+
+.code-block {
+    background-color: #f9fafb;
+    padding: 1.25rem;
+    border-radius: 8px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+    border-left: 4px solid #6366f1;
+    overflow-x: auto;
+    text-align: left;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.code-block pre,
+.code-block code {
+    text-decoration: none !important;
+    /* Crucial for code blocks */
+}
+
+
+.example-output {
+    margin-top: 1.5rem;
+    background-color: #f1f5f9;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #10b981;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.95rem;
+    text-align: left;
+    white-space: pre-wrap;
+    text-decoration: none !important;
+    /* Ensure no underline */
+}
+
+.example-output pre {
+    text-decoration: none !important;
+    /* Crucial for example output pre */
+}
+
+@media (max-width: 768px) {
+    .tab-buttons {
+        flex-direction: column;
+    }
+
+    .tab-btn {
+        width: 100%;
+    }
+
+    .code-block {
+        font-size: 0.9rem;
+    }
+}

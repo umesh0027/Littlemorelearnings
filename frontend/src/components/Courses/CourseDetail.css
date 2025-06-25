@@ -1,0 +1,245 @@
+
+
+.course-detail-container {
+    padding: 30px 40px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.progress-bar-section {
+    margin-bottom: 30px;
+}
+
+.progress-bar-section span {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.progress-bar-outer {
+    height: 10px;
+    background-color: #e0d5f0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    background-color: rgba(138, 79, 191, 0.8);
+    transition: width 0.4s ease-in-out;
+}
+
+.course-detail-content {
+    display: flex;
+    gap: 40px;
+}
+
+/* Left Side - Video */
+.video-section {
+    flex: 2;
+}
+
+.video-description {
+    margin: 16px 0;
+    font-size: 15px;
+    color: #444;
+}
+
+.video-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.nav-buttons button,
+.mark-complete-btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-buttons button {
+    background-color: rgba(138, 79, 191, 0.2);
+    color: #6e38a9;
+    margin-right: 10px;
+}
+
+.mark-complete-btn {
+    background-color: rgba(138, 79, 191, 0.8);
+    color: white;
+}
+
+.mark-complete-btn.completed {
+    background-color: #28a745;
+}
+
+/* Right Side - Video List */
+.video-list-section {
+    flex: 1;
+}
+
+.video-list-section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.video-item {
+    padding: 10px 12px;
+    background: #f5f1fb;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.video-item:hover {
+    background: #e4d6f5;
+}
+
+.video-item.active {
+    font-weight: 600;
+    background: rgba(138, 79, 191, 0.3);
+}
+
+.video-item.done::after {
+    content: " ✅";
+    color: green;
+    margin-left: 6px;
+}
+
+
+.completion-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    max-width: 400px;
+    color: #222;
+}
+
+.modal-content h2 {
+    color: rgba(138, 79, 191, 1);
+    margin-bottom: 12px;
+}
+
+.modal-content p {
+    margin: 10px 0;
+}
+
+.go-back-btn {
+    margin-top: 15px;
+    padding: 10px 16px;
+    background-color: rgba(138, 79, 191, 0.9);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.go-back-btn:hover {
+    background-color: rgba(138, 79, 191, 1);
+}
+
+.download-pdf-btn {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #8a4fbf;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.download-pdf-btn:hover {
+    background-color: #6e3da1;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.download-pdf-btn {
+    padding: 0.5rem 1rem;
+    background-color: #8a4fbf;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-pdf-btn:hover {
+    background-color: #6e3da1;
+}
+
+/* If you ever decide to store videos and notes in a CMS or JSON,
+      ensure: 
+      {
+        "id": 1,
+          "title": "Limits and Continuity",
+          "url": "...",
+          "notes": null
+      }*/
+
+.popup-message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    z-index: 9999;
+    animation: fadeInOut 3s ease-in-out;
+}
+
+.popup-message.warning {
+    background-color: #f44336;
+    /* red for warning */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }     
+}

@@ -1,0 +1,464 @@
+/* AdminPanel.css */
+
+.admin-panel {
+    max-width: 900px;
+    margin: 2rem auto 4rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background: #f9f7fc;
+    border-radius: 10px;
+    padding: 2rem 3rem;
+    box-shadow: 0 6px 20px rgb(90 45 129 / 0.15);
+}
+
+.admin-title {
+    text-align: center;
+    color: #5a2d81;
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+}
+
+.main-options {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.course-options {
+    position: relative;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgb(90 45 129 / 0.1);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.options-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    justify-content: center;
+    position: relative;
+}
+
+.options-header h2 {
+    color: #5a2d81;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.options-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main-btn,
+.sub-btn,
+.submit-btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 0.65rem 1.8rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #5a2d81;
+    box-shadow: 0 4px 12px rgb(90 45 129 / 0.3);
+    transition: all 0.3s ease;
+    user-select: none;
+    text-align: center;
+}
+
+.main-btn:hover,
+.sub-btn:hover,
+.submit-btn:hover {
+    background-color: #7a50b3;
+    box-shadow: 0 6px 16px rgb(122 80 179 / 0.4);
+    transform: translateY(-2px);
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    background-color: #bbb;
+    color: #222;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.back-btn.left {
+    position: absolute;
+    left: 0;
+    margin-top: 0;
+}
+
+.back-btn:hover {
+    background-color: #999;
+    transform: translateX(-3px);
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgb(90 45 129 / 0.1);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.form-container h2 {
+    color: #5a2d81;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.3rem;
+}
+
+label input,
+label textarea,
+label select {
+    margin-top: 0.45rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: 2px solid #d1c4e9;
+    border-radius: 6px;
+    font-family: inherit;
+    resize: vertical;
+    transition: all 0.3s ease;
+    background: #faf9ff;
+    color: #2e2e2e;
+}
+
+label select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.2rem;
+    padding-right: 2.5rem;
+}
+
+label input:focus,
+label textarea:focus,
+label select:focus {
+    outline: none;
+    border-color: #5a2d81;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(90, 45, 129, 0.35);
+}
+
+/* Specific styling for code textarea */
+.code-area {
+    font-family: "Source Code Pro", monospace, monospace;
+    font-size: 0.95rem;
+    background-color: #f3f1f8;
+    border: 2px solid #b39ddb;
+    color: #3b2f7b;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    min-height: 100px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.8rem;
+}
+
+.form-buttons .submit-btn {
+    margin-top: 0;
+    flex: 1;
+}
+
+.form-buttons .back-btn {
+    margin-top: 0;
+    flex: 0.5;
+}
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+    .admin-panel {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .main-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .options-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .back-btn.left {
+        position: static;
+        align-self: flex-start;
+    }
+
+    .main-btn,
+    .sub-btn {
+        width: 100%;
+    }
+
+    .form-container {
+        padding: 1.6rem 1.8rem;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .form-buttons .submit-btn,
+    .form-buttons .back-btn {
+        width: 100%;
+    }
+}
+
+.logout-btn {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(229, 62, 62, 0.5);
+}
+
+.logout-btn:hover {
+    background-color: #c53030;
+    box-shadow: 0 4px 12px rgba(197, 48, 48, 0.7);
+    transform: translateY(-2px);
+}
+
+.logout-btn:active {
+    background-color: #9b2c2c;
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+.login-panel {
+    max-width: 500px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgb(90 45 129 / 0.1);
+}
+
+.login-panel .admin-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.login-panel .submit-btn {
+    margin-top: 1rem;
+}
+
+/* Animation for better UX */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container,
+.course-options,
+.coding-lab-form {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+.add-category-form {
+    background-color: #f5f0ff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: 1px dashed #b39ddb;
+}
+
+.add-category-form h3 {
+    color: #5a2d81;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.category-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 600px) {
+    .category-inputs {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add to your existing .form-buttons styles */
+.form-buttons .submit-btn:disabled {
+    background-color: #b39ddb;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.course-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 300px;
+  background-color: #f9f9f9;
+}
+
+
+
+.course-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.edit-btn {
+  background-color: #ffd700;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.video-card {
+  border: 1px solid #d1c4e9;
+  background-color: #f9f7fc;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(90, 45, 129, 0.1);
+}
+
+.video-card h4 {
+  font-size: 1.2rem;
+  color: #5a2d81;
+  margin-bottom: 0.5rem;
+}
+
+.video-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.video-card a {
+  color: #7a50b3;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.video-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+}
+
+.video-actions button {
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.video-actions .edit-btn {
+  background-color: #ffd700;
+  color: #333;
+}
+
+.video-actions .delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.video-actions button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.coding-problem-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.coding-problem-menu .sub-btn{
+    margin-top: 10px;
+}
+.back-btn{
+    margin-top: 10px;
+}
+
+.coding-actions{
+   display: flex;
+   gap: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+  /* justify-content: space-between;  */
+}
