@@ -17,7 +17,9 @@ const getYouTubeEmbedUrl = (videoUrl) => {
 
   if (match && match[1]) {
     // Construct the embed URL with parameters for autoplay, controls, etc.
-    return `http://www.youtube.com/embed/${match[1]}?autoplay=1&controls=1&showinfo=0&rel=0`;
+    // return `http://www.youtube.com/embed/${match[1]}?autoplay=1&controls=1&showinfo=0&rel=0`;
+    return `https://www.youtube.com/embed/${match[1]}?autoplay=1&controls=1&showinfo=0&rel=0`;
+
     // autoplay=1: Starts video automatically
     // controls=1: Shows player controls
     // showinfo=0: Hides video title and uploader info
